@@ -1,0 +1,52 @@
+<div class="offset-lg-12 col-lg-12 col-sm-12 col-12 main-section text-center">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-12 profile-header">
+                    <%= image_tag @user.avatar.url || 'avatar.jpg',  class: 'img-circle img-thumbnail imguserbox' %>
+                </div>
+            </div>
+            <div class="row user-detail">
+                <div class="col-lg-12 col-sm-12 col-12">
+                    <p></p>
+                    <h3><strong><%= @user.name %></strong></h3>
+                    <h4><%= @user.bolum %></h4>
+                    <h4><%= @user.ogrencilikdurum %></h4>
+  
+                    <hr>
+                    <div class="text-center center-block">
+                        
+                        <% if @socexist > 0 %>
+        			       <% @socall.each do |socall| %>
+        			         <a href="<%= socall.socbody %>"><i class="fa fa-<%= socall.socname.downcase %> fa-2x social"></i></a>   
+                           <% end %>
+                        <% end %>
+
+                        <% if current_user.id==@user.id %>
+                              <%= link_to '' ,editsocialmedia_user_path(@user), class: 'fa fa-cogs' %>
+                        <% end %>
+
+                        
+  					</div>
+                    <br>
+                    
+                      <div class="panel panel-primary">
+                          <ul class="list-group">
+                              <%= link_to  user_path(@user), class: 'list-group-item'  do %>
+                                  <i class="fa fa-user-circle" aria-hidden="true"></i> Profil
+                              <% end %>
+                              <%= link_to  kisisel_user_path(@user), class: 'list-group-item'  do %>
+                                  <i class="fa fa-user" aria-hidden="true"></i> Kisisel
+                              <% end %>
+                              <%= link_to  projeler_user_path(@user), class: 'list-group-item'  do %>
+                                  <i class="fa fa-line-chart" aria-hidden="true"></i> Projelerim
+                              <% end %>                              
+                              <%= link_to  iletisim_user_path(@user), class: 'list-group-item'  do %>
+                                  <i class="fa fa-vcard-o" aria-hidden="true"></i> İletişim
+                              <% end %>
+                            
+                          </ul>
+                      </div>
+
+                      
+                </div>
+            </div>
+</div>

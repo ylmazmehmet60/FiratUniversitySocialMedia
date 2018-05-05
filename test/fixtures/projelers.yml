@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  projelerisim: MyString
+  projelerkurum: MyString
+  projelergorev: MyString
+  projelerbas: MyString
+  projelerbit: MyString
+  user: one
+
+two:
+  projelerisim: MyString
+  projelerkurum: MyString
+  projelergorev: MyString
+  projelerbas: MyString
+  projelerbit: MyString
+  user: two

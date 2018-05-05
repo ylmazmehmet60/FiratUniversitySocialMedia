@@ -1,0 +1,153 @@
+<%= render 'shared/wrapper' %>
+
+<div class="container white">
+    <div id="user-info" class="well">
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+              
+                <div class="item active">
+                  <img src="https://i.hizliresim.com/gOEyb0.jpg">
+                   <div class="carousel-caption">
+                    <p>Fırat Üniversitesi ile mezunları arasındaki bağları kuvvetlendirmek, mezunların birbirleri arasında iletişim ağını oluşturmak ve bu ağı geliştirmek için kurulmuştur.</p>
+                  </div>
+                </div><!-- End Item -->
+         
+                 <div class="item">
+                  <img src="https://i.hizliresim.com/Z9mJno.jpg">
+                   <div class="carousel-caption">
+                    <p>Doğru bir CV için gerekli dökümanlar ve hazır CV örnekleri hazırlanmıştır. <a class="label label-primary" href="/home/cv" target="_blank">Devamını Oku..</a></p>
+                  </div>
+                </div><!-- End Item -->
+                
+                <div class="item">
+                  <img src="https://i.hizliresim.com/bBmYEj.jpg">
+                   <div class="carousel-caption">
+                    <p>Bölümümüz ile ilgili istatistikleri görebilirsiniz.<a class="label label-primary" href="/home/statistic" target="_blank">Devamını Oku..</a></p>
+                  </div>
+                </div><!-- End Item -->
+                
+                <div class="item">
+                  <img src="https://i.hizliresim.com/Rn2MRa.jpg">
+                   <div class="carousel-caption">
+                    <p>Sıkça Sorulan Sorular <a class="label label-primary" href="/home/sss" target="_blank">Devamını Oku..</a></p>
+                  </div>
+                </div><!-- End Item -->
+        
+                <div class="item">
+                  <img src="https://i.hizliresim.com/p6l1aq.jpg">
+                   <div class="carousel-caption">
+                    <p>Hakkımızda bilgi edinebilirsiniz. <a class="label label-primary" href="/home/hakkimizda" target="_blank">Devamını Oku..</a></p>
+                  </div>
+                </div><!-- End Item -->
+                        
+              </div><!-- End Carousel Inner -->
+        
+        
+            <ul class="list-group col-sm-4">
+              <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Fırat Üniversitesi Tek.Fak. Yazılım Mühendisliği Mezun Bilgi Sistemi</h4></li>
+              <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Özgeçmiş Hazırlama ve Mülakat Teknikleri</h4></li>
+              <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Bölüm İstatistikleri</h4></li>
+              <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>S.S.S</h4></li>
+              <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Hakkımızda</h4></li>
+            </ul>
+        
+              <!-- Controls -->
+              <div class="carousel-controls">
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+              </div>
+        
+            </div><!-- End Carousel -->
+        </div><!-- End Row -->
+    
+        <br>
+
+        
+        <div class="row" >
+            <div class="row">
+                <div class="col-md-9">
+                    <h3>
+                        Üniversite Haberleri
+                    </h3>
+                </div>
+                <div class="col-md-3">
+                    <!-- Controls -->
+                    <div class="controls pull-right hidden-xs">
+                        <a class="fa fa-angle-left" href="#carousel-example"
+                            data-slide="prev" style="font-size:24px"></a><a class="fa fa-angle-right" href="#carousel-example"
+                                data-slide="next" style="font-size:24px"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <% for i in(0..2) %>
+                            <div class="col-sm-4">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="<%= @img[i].join(",") %>" class="img-responsive img-box img-thumbnail" alt="a" style="height:250px;width:370px;" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <i class="icon-calendar"></i> <%= @tarih[i] %>
+                                                <a href="http://www.firat.edu.tr<%= @link[i].join(",") %>" class="price-text-color"><br>
+                                                    <%= @baslik[i] %>
+                                                </a><br>
+                                                <p><%= @icerik[i] %></p>
+                                                <a href="http://www.firat.edu.tr<%= @link[i].join(",") %>">Devamını Oku...</a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% end %>
+                         
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row" >
+                            <% for i in(2..4) %>
+                            <div class="col-sm-4">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="<%= @img[i].join(",") %>" class="img-responsive img-box img-thumbnail" alt="a" style="height:250px;width:370px;" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-12">
+                                                <i class="icon-calendar"></i> <%= @tarih[i] %>
+                                                <a href="http://www.firat.edu.tr<%= @link[i].join(",") %>" class="price-text-color"><br>
+                                                    <%= @baslik[i] %>
+                                                </a><br>
+                                                <p><%= @icerik[i] %></p>
+                                                <a href="http://www.firat.edu.tr<%= @link[i].join(",") %>">Devamını Oku...</a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <hr> <br>
+    </div>  
+</div> 
+

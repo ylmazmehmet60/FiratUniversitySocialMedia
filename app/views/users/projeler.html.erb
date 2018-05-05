@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row" id="ustbosluk">
+      <div class="col-lg-4">
+        <%= render 'userbox' %>
+      </div>
+      <div class="col-lg-8">
+        <div class="middlearea">
+      	<h1>Projelerim</h1>
+      		<div class="category">
+      		  <i class="fa fa-graduation-cap fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">Projelerim</h3>
+      			<% if @countprojeler > 0 %>
+        			<div class="catcontent1">
+        			   <% @showprojeler.each do |projeler| %>
+        				    <div class="catcontent1line">
+            					<h4><%= projeler.projelerbas %> - <%= projeler.projelerbit %></h4>
+            					<h3><a href="<%= projeler.projelerkurum %>"><%= projeler.projelerisim %></a></h3>
+            					<h4>Görev: <%= projeler.projelergorev %>
+            					</h4>
+        					</div>
+        					<% end %>
+        					
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , projelerekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+        				
+
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , projelerekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br>
+              </div>
+      			<% end %>
+      			
+      			<br id="BR_18" />
+      		</div>
+      	</div>
+    </div>
+  </div>
+  <br>

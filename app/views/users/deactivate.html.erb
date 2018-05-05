@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="well">
+      <h3>Üyeliğimi Sil</h3>
+      <hr>
+      <h5>Hesabı iptal etmek için aşağıdaki Düğmeye basın.</h5>
+      <br>
+      <%= button_to 'Kalıcı olarak sil', registration_path(@user), data: { confirm: "Eminmisiniz?" }, method: :delete, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</div>

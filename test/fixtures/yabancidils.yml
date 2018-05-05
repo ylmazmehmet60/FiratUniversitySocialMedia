@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yabancidilisim: MyString
+  yabancidilsinavisim: MyString
+  yabancidilyil: MyString
+  yabancidilpuan: MyString
+  user: one
+
+two:
+  yabancidilisim: MyString
+  yabancidilsinavisim: MyString
+  yabancidilyil: MyString
+  yabancidilpuan: MyString
+  user: two

@@ -1,0 +1,21 @@
+<%= form_for([@user, @user.yabancidils.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Dil Adı</h5>
+        <%= f.text_field :yabancidilisim, placeholder: 'Dil Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Sınav Adı</h5>
+        <%= f.text_field :yabancidilsinavisim, placeholder: 'Sınav Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Sınav Puanı veya Seviyesi</h5>
+        <%= f.text_field :yabancidilpuan, placeholder: 'Puan', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Sınav Yılı</h5>
+        <%= f.text_field :yabancidilyil, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

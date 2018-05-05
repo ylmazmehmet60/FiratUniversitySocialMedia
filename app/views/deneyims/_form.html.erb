@@ -1,0 +1,29 @@
+<%= form_for([@user, @user.deneyims.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Kurum Adı</h5>
+        <%= f.text_field :deneyimkurumisim, placeholder: 'Kurum Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Birim Adı</h5>
+        <%= f.text_field :deneyimbirimisim, placeholder: 'Birim Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Bölüm Adı</h5>
+        <%= f.text_field :deneyimbolumisim, placeholder: 'Bölüm Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Ünvanınız</h5>
+        <%= f.text_field :deneyimunvan, placeholder: 'Ünvanınız', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <h5>Başlangıç Yılı</h5>
+        <%= f.text_field :deneyimbasyil, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <h5>Bitiş Yılı</h5>
+        <%= f.text_field :deneyimbityil, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

@@ -1,0 +1,24 @@
+<% if deneyim.user %>
+    <% if deneyim.id != nil %>
+        <div id="deneyim-<%= deneyim.id %>">
+            <div class="alert alert-success" style="height:110px;">
+            <div class="pull-left">
+                    <%= deneyim.deneyimkurumisim %>-<%= deneyim.deneyimbirimisim %><br>
+                    Bölüm: <%= deneyim.deneyimbolumisim %>- Unvan: <%= deneyim.deneyimunvan %><br>
+                    Yıl: <%= deneyim.deneyimbasyil %>-<%= deneyim.deneyimbityil %><br>
+                   
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [deneyim.user,deneyim], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+
+
+
+
+
+       
+       
+  

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  odulisim: MyString
+  odulveren: MyString
+  odulyil: MyString
+  user: one
+
+two:
+  odulisim: MyString
+  odulveren: MyString
+  odulyil: MyString
+  user: two

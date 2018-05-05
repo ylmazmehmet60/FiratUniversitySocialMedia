@@ -1,0 +1,413 @@
+<%= render 'shared/wrapper' %>
+<br>
+
+ <div class="container breadcrumb-sektion ">
+  <ol class="breadcrumb">
+    <li><a href="/">Anasayfa</a></li>
+    <li class="active">SSS</li>        
+  </ol>
+</div>
+
+ <%-# IMAGE MODAL -%>
+ <a name="0"><div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <img src="" class="enlargeImageModalSource" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"><img style="width:100%; height:auto;" src="https://resmim.net/f/hvf3Xl.png"></div>
+        <div class="col-md-4"><img style="width:100%; height:auto;" src="https://resmim.net/f/ObyE97.png"></div>
+        <div class="col-md-4"><img style="width:100%; height:auto;" src="https://resmim.net/f/hvf3Xl.png"></div>
+    </div>    
+</div>
+ <%-# -*-*-*-*-*-*-*- -%>
+<br>
+<div class="container white">
+        <div id="user-info" class="well">
+                <center><p class="lead">Özgeçmiş Hazırlama ve Mülakat Teknikleri</p></center><hr>
+                <a name="1"></a><h1><p class="lead">Özgeçmiş (CV) Yazımı</p></h1>
+                <ul>
+                    <li><p><i>Kariyer Hedefi</i></p>
+                        <p>Başvurduğunuz pozisyona uygun özelliklerinizi anlatabileceğiniz, kendinizi tanıtacağınız ve başvuru amacınızı belirteceğiniz çok kısa bir paragraf yazmalısınız.</p>
+                    </li>
+                    <li>
+                        <p><i>Kişisel Bilgiler</i></p>
+                        <p>Adınızı, açık adresinizi, size ulaşılabilecek telefon numaralarını ve e-mail adresinizi özgeçmişinizin başına mutlaka yazmalısınız.
+                        Sayfanın ortasına ya da sol üst köşeye yazılmalı.
+                        Doğum tarihi, doğum yeri, medeni durum gibi bilgiler yazılmamalı.
+                        Uyruğunuzu yurtdışındaki işlere başvuru yaparken yazabilirsiniz.</p>
+                    </li>
+                    <li><p><i>Eğitim Bilgileri</i></p>
+                        <p>Mezun olduğunuz programları ters kronolojik sıra ile yazın.
+                        Okurken aldığınız dereceleri ya da önemli başarıları ve genel not ortalamanızı belirtin.
+                        Yeni mezunsanız bu bölüm başta olmalı ama iş deneyimine sahipseniz bu bölümü iş deneyimi bölümünün altına yazabilirsiniz.</p>
+                    </li>
+                    <li><p><i>İş/Staj Deneyimi</i></p>
+                        <p>Ters kronolojik sıra ile iş ve staj deneyimlerinizi yazın.
+                        Çalıştığınız yerdeki pozisyonunuzu belirtin. Her birinin altına sorumluluklarınızı ve genel olarak yaptığınız işleri kısaca listeleyin.
+                        Başarılarınızı özellikle vurgulayın.</p>
+                    </li>
+                    <li><p><i>Beceriler</i></p>
+                        <p>Bildiğiniz yabancı dilleri ve bilgisayar programlarını yazın.
+                        Birkaç program ya da yabancı dil biliyorsanız yanlarına hangi seviyede bildiğinizi ekleyebilirsiniz.
+                        Bunların dışında başvurduğunuz pozisyon özelinde yazılabilecek becerilerinizi ekleyin.
+                        Mesleğinizle ilgili profesyonel kuruluşlara üye iseniz bunları yazmanız sizin için avantaj olacaktır.
+                        Bunun dışında katıldığınız aktiviteleri ve ilgi alanlarınızı uygun başlıklar altında özet olarak ekleyebilirsiniz.
+                        Fakat bütün ilgi alanlarınızı ya da aktivitelerinizi sıralamak yerine sadece önemli olan ya da başvurduğunuz pozisyonla ilgili olan birkaçını eklemelisiniz.
+                        Eğer pozisyon için gerekli ise ek bilgi başlığı altında sürücü belgenizin olduğunu belirtebilirsiniz.</p>
+                    </li>
+                    <li><p><i>Eğitimler/Sertifikalar</i></p>
+                        <p>Katıldığınız mesleki kurs ve eğitimleri, sertifikalarınızı uygun başlıklar altında belirtin.</p>
+                    </li>
+                    <li><p><i>Referanslar</i></p>
+                        <p>İki referans yazılabilir.
+                        Yeni mezunsanız referanslarınızın biri hocanız, biri de stajyer olarak bağlı çalıştığınız yöneticiniz olabilir.
+                        Diğer seçenek ise, "Talep edildiğinde verilecektir." ibaresini eklemektir.
+                        Eğer referansınız yoksa bu bölümü eklemeyebilirsiniz.
+                        Sizi çok yakından tanımayan kişileri referans olarak göstermeyin ve referans gösterdiğiniz kişilere önceden haber verin.</p>
+                    </li>
+                </ul>
+                
+                <br><br>
+                <a name="2"></a><h1><p class="lead">Etkili CV Yazımı İçin Püf Noktalar</p></h1>
+                <ul>
+                    <li>
+                        <p>Özgeçmişiniz en fazla 2 sayfa olmalı. (Akademik CV daha uzun olabilir.)
+                        Uzun paragraflardan kaçının. (CV incelemelerine en fazla 1-3 dakika süre ayrılmaktadır)
+                        Birinci ya da üçüncü tekil kişi ağzıyla yazın.
+                        Özgeçmişinizi bilgisayarda yazın.
+                        Genellikle ‘’Times New Roman’’ veya ‘’Arial’’ gibi kolay okunabilen karakterler kullanın, 11 ya da 12 punto ile yazın.
+                        Kelime ve cümlelerin altını çizmeyin. (İnternet adresleri hariç)
+                        İmla kurallarına dikkat edin.
+                        Anlaşılır bir dil kullanın, size ait olmayan ifadeleri kullanmayın.
+                        Özelliklerinizi ve başarılarınızı ön plana çıkarın.
+                        Başvurduğunuz pozisyona uygun bir ön yazı hazırlayın. Genel başvuru yapıyorsanız, ön yazınızda hangi alanda çalışmak istediğinizi belirtin.
+                        Ters kronolojik sıra takip edin.
+                        Gereksiz bilgiler eklemekten kaçının.
+                        Fotoğraf (isteniyorsa)
+                        Fotoğrafçıda çekilmiş, vesikalık fotoğraf olmalı.
+                        Takım elbiseli çekilmiş fotoğraflar eklenmeli.
+                        Silik, bulanık, arka planı karışık fotoğraflar eklenmemeli.</p>
+                    </li>
+                 </ul>
+                 
+                <br><br>
+                <a name="3"></a><h1><p class="lead">CV Türleri</p></h1>
+                <ul>
+                    <li><p><i>Kronolojik CV</i></p>
+                        <p>En yaygın kullanılan özgeçmiş türüdür. Ters kronolojik sıra takip edilir. 
+                        Okuyan açısından takibi kolaydır ama iş yaşamında uzun süreli boşluklar olan kişiler için uygun bir tür değildir. Bu türde bulunabilecek başlıklar aşağıdaki gibidir:</p>
+                        <blockquote><ul>
+                            <li><p>Kişisel Bilgiler</p></li>
+                            <li><p>Kariyer Hedefi/ Profil</p></li>
+                            <li><p>Eğitim Bilgileri</p></li>
+                            <li><p>İş/Staj Deneyimi</p></li>
+                            <li><p>Eğitimler/Seminerler</p></li>
+                            <li><p>Aktiviteler/Üyelikler/İlgi Alanları</p></li>
+                            <li><p>Referanslar</p></li>
+                            <li><p>Beceriler</p></li>
+                        </ul> </blockquote>
+                    </li>
+                    <li><p><i>Performans CV</i></p>
+                        <p>Kariyerinizdeki gelişimi ortaya çıkarabileceğiniz bir özgeçmiş türüdür. 
+                        Fakat farklı bir alanda çalışmayı hedefliyorsanız ya da henüz çok fazla başarınız yoksa bu tür sizin için uygun değildir. Aşağıdaki başlıklardan oluşabilir:</p>
+                        <blockquote><ul>
+                            <li><p>Kişisel Bilgiler/Profil</p></li>
+                            <li><p>Önemli Başarılar: Çalışma hayatınızdaki önemli başarıları ön plana çıkarabileceğiniz bir alt başlık olarak ekleyebilirsiniz.
+                                İş Deneyimi: Sorumluluklarınızı listeleyin ve önemli başarılarınızı vurgulayın.</p></li>
+                            <li><p>Eğitimler/Sertifikalar</p></li>
+                            <li><p>Eğitim Bilgileri</p></li>
+                            <li><p>Beceriler/İlgi Alanları/Diğer Bilgiler</p></li>
+                            <li><p>Referanslar</p></li>
+                        </ul></blockquote>
+                    </li>
+                    <li><p><i>İşlevsel CV</i></p>
+                        <p>Sahip olunan iş tecrübelerini belli başlıklar altında toplayarak yazılan bu özgeçmiş türünde ilgi tecrübelere ve başarılara çekilmiş olur. 
+                        Belli bir süre iş yaşamına ara vermiş ya da kariyer yolunu değiştirmek isteyen kişilerin kullanabileceği bir türdür. Aşağıdaki başlıklardan oluşabilir:</p>
+                        <blockquote><ul>
+                            <li><p>Kişisel Bilgiler/Profil</p></li>
+                            <li><p>İş deneyimlerinizi uygun başlıklar altında sınıflandırmalısınız (Örn: İnsan Kaynakları, Pazarlama vb.). 
+                            Bu başlıklar altında çalıştığınız pozisyonlarda aldığınız sorumlulukları ve elde ettiğiniz başarıları genelleyerek yazabilirsiniz.</p></li>
+                            <li><p>İş Deneyimi: Ters kronolojik sıra ile çalıştığınız iş yerlerini ve pozisyonları kısaca listeleyin.</p></li>
+                            <li><p>Eğitimler/Sertifikalar</p></li>
+                            <li><p>Eğitim Bilgileri</p></li>
+                            <li><p>Beceriler/İlgi Alanları/Diğer Bilgiler</p></li>
+                            <li><p>Referanslar</p></li>
+                        </ul></blockquote>
+                    </li>
+                    <li><p><i>Hedefe Yönelik CV</i></p>
+                        <p>Kişisel becerilerin, deneyimlerin ve niteliklerin altı çizilir. İşlevsel özgeçmişten farkı, kariyer hedefinin belirlenmiş olduğu durumlarda belirli bir sektörün, belirli bir koluna yönelik başvuru yaparken kullanılmasıdır. 
+                        Aşağıdaki başlıklardan oluşabilir:</p>
+                        <blockquote><ul>
+                            <li><p>Kişisel Bilgiler/Profil</p></li>
+                            <li><p>Yetkinlikler: Bugüne kadar yaptığınız işlerden derlediğiniz beceri ve yetkinliklerinizin başvurduğunuz pozisyona uygun olanlarını listelemelisiniz.</p></li>
+                            <li><p>Başarılar: Çalışırken ulaştığınız başarıları kısaca listelemelisiniz.</p></li>
+                            <li><p>Deneyim: Kısaca hangi tarihler arasında, hangi firmada, hangi pozisyonda çalıştığınızı listelemelisiniz.</p></li>
+                            <li><p>Eğitim Bilgileri</p></li>
+                            <li><p>Beceriler/Diğer Bilgiler</p></li>
+                            <li><p>Referanslar</p></li>
+                        </ul></blockquote>
+                    </li>
+                    <li><p><i>Alternatif CV</i></p>
+                        <p>Standart bir formatı yoktur. Yaratıcılık gerektiren alanlara yapılan başvurularda kullanılabilir. (Örn: Reklamcılık, moda tasarım, halkla ilişkiler vb.)</p>
+                        <blockquote><ul>
+                            <li><p>Öğrenci/Yeni Mezun CV Başlık Örnekleri</p></li>
+                            <li><p>Kişisel Bilgiler</p></li>
+                            <li><p>Kariyer Hedefi</p></li>
+                            <li><p>Eğitim Bilgileri</p></li>
+                            <li><p>Staj/İş Deneyimi (varsa)</p></li>
+                            <li><p>Yabancı Dil Bilgisi</p></li>
+                            <li><p>Bilgisayar Bilgisi</p></li>
+                            <li><p>Üyelikler/Aktiviteler/İlgi Alanları</p></li>
+                        </ul></blockquote>
+                    </li>
+                </ul>   
+                
+                <br><br>
+                <a name="4"></a><h1><p class="lead">Ön Yazı Nasıl Hazırlanır?</p></h1>
+                <ul>
+                    <li><p><i>Ön Yazı</i></p>
+                        <p>Ön yazı, CV’nin önüne eklenen ve işte benim özgeçmişim demenin ötesinde mesajlar veren bir kapak sayfasıdır.
+                        <br>Neden onlara yazdığınızı,
+                        <br>Neden bu iş için çok uygun olduğunuzu,
+                        <br>Kariyer beklentilerinizi gösterir.</p>
+                    </li>
+                    
+                    <li><p><i>Giriş</i></p>
+                        <p>Kim olduğunuzu ve ilanı nerede görüp başvuru yaptığınızı açıklayın.</p>
+                    </li>
+                    
+                    <li><p><i>Gelişme</i></p>
+                        <p>Şirketle ve pozisyonla neden ilgilendiğinizi açıklayın.
+                        Pozisyona uygun özelliklerinizden bahsedin ve mümkünse bunları örneklendirin.
+                        Şirketle ilgili sahip olduğunuz bilgilerden ve neden bu iş için uygun olduğunuzdan bahsedin.
+                        Genel başvuru yapıyorsanız, kariyer beklentinizi açıklayın.</p>
+                    </li>
+                    
+                     <li><p><i>Sonuç</i></p>
+                        <p>Teşekkür cümlesi yazın.
+                        Bundan sonra iletişimi nasıl sürdürebileceğinizle ilgili bilgi verin.</p>
+                    </li>
+                    
+                    <li><p><i>Ön yazıyı hazırlamadan önce,</i></p>
+                        <p>Amaçlarınızı belirleyin.
+                        <br>Firma ve pozisyon hakkında bilgi sahibi olun.
+                        <br>Başvurduğunuz firma ve pozisyonu tercih etmenizdeki nedenleri saptayın.
+                        <br>Bilgi ve becerilerinizin farkına varın.
+                        <br>Kararlılık ve istekliliğinizi ortaya koyun.</p>
+                    </li>
+                </ul>
+                
+                <br><br>
+                <a name="5"></a><h1><p class="lead">Mülakatta Ne Yapmalı?</p></h1>
+                <ul>
+                    <li><p><i>Mülakat Öncesi</i></p>
+                        <p>Firma ve pozisyon hakkında detaylı bilgi sahibi olun.
+                        <br>Başvurduğunuz firma ve pozisyonu tercih etme nedenlerinizi iyi belirleyin.
+                        <br>Mümkünse geçmiş çalışmalarınızı özetleyen bir portfolio hazırlayabilirsiniz.
+                        <br>Mülakat yerini ve adresi öğrenin.
+                        <br>Mümkünse mülakat yapacak kişinin ismini ve pozisyonunu öğrenin.
+                        <br>Mülakata geç kalmayın, mümkünse 10 dakika önce orada olun.
+                        <br>Kıyafet seçiminize dikkat edin.
+                        <br>Gelebilecek soruları düşünün ve hazırlanın.
+                        <br>Bekleme odasındaki davranışlarınıza dikkat edin.</p>
+                    </li>
+                    
+                    <li><p><i>Mülakat Sırasında</i></p>
+                        <p>Görüşme odasına giriş ve ilk izlenim önemlidir.
+                        <br>El sıkışmak: Enerjik ve güçlü olmalı. El terli olmamalı.
+                        <br>Göz içine bakmak: Konuşurken odanın çevresine değil göz içine bakın. Aksi kendine güvensizliğin göstergesidir.
+                        <br>El kol hareketleri: Konuşmaya anlam katar. Aşırı olursa dikkati dağıtır.
+                        <br>Saç kaşımak, kalem çıtçıtlamak, bacak sallamak olumsuz etkiler bırakır.
+                        <br>İkramlara yönelik davranışlar önemlidir. İkram edilen bir şeyi içmemek ayıp sayılabilir ama konuşmanın akışını etkileyecek şekilde yiyip içmek doğru olmaz.</p>
+                    </li>
+                    
+                    <li><p><i>Mülakat Soruları</i></p>
+                        <p>Genel Sorular</p>
+                        <blockquote><ul>
+                            <li><p>Bize kendinizi tanıtın (2 dakikayı aşmamalı)</p></li>
+                            <li><p>Neden bizim şirkete başvurdunuz?</p></li>
+                            <li><p>Neden sizi seçelim?</p></li>
+                            <li><p>Siz kendinizi nasıl tanımlardınız?</p></li>
+                            <li><p>Arkadaşlarınız sizi nasıl tanımlar?</p></li>
+                        </ul></blockquote>
+                        
+                        <p>Davranışsal Sorular</p>
+                        <blockquote><ul>
+                            <li><p>Bir projeye lider olarak atandığınızda, nasıl bir yönetim gösterdiniz?</p></li>
+                            <li><p>İş planının gerisinde kaldığınız bir proje oldu mu? Anlatın.</p></li>
+                        </ul></blockquote>
+                        
+                        <p>Gerilim Soruları</p>
+                        <blockquote><ul>
+                            <li><p>Gelir gider hesapları ile oynayan bir çalışanı keşfettiğinizde ne yapardınız?</p></li>
+                            <li><p>İş hayatınızda yaptığınız en büyük hata nedir? Bu hatadan edindiğiniz tecrübe?</p></li>
+                            <li><p>Çalışma grubundaki 5 kişiden 4’ü birbiri ile anlaşamıyor. Çözümünüz?</p></li>
+                        </ul></blockquote>
+                        
+                        <p>Teknik Mülakat</p>
+                        <blockquote><ul>
+                            <li><p>İş tecrübesini de içeren belirli teknik konulara odaklanan sorular.</p></li>
+                        </ul></blockquote>
+                    </li>
+                </ul>
+                
+                
+                <br><br>
+               <a name="6"></a><h1><p class="lead">Bazı Mülakat Soruları ve Yanıtları</p></h1>
+                <ul>
+                    <li><p><i>En zayıf yönünüz nedir?</i></p>
+                        <p>Zayıflığı, güçlü yöne çevirmek mümkün olabilir. 
+                        Örneğin, gençlik ya da tecrübesizlik faktörleri zayıf yanlar olabileceği gibi dinamizm ve iş öğrenme kolaylığı açısından bakıldığında güçlü yanlar olarak da sunulabilir.</p>
+                    </li>
+                    
+                    <li><p><i>En güçlü yönünüz nedir?</i></p>
+                        <p>Başvurduğunuz iş ile ilintili olanı söylemek artı puan kazandıracaktır.</p>
+                    </li>
+                    
+                    <li><p><i>Stres ile nasıl başa çıkabiliyorsunuz?</i></p>
+                        <p>"Rekabetçi ve stresli ortamlar verimimi artırır"
+                        <br>"Strese göre değil ortama ve verilere göre önlem almak gerekir."</p>
+                    </li>
+                    
+                    <li><p><i>Neden bizim şirkette çalışmak istiyorsunuz?</i></p>
+                        <p>"Verileriniz yükselişte. Yükselen bir şirkette çalışmak ve katkıda bulunmak istiyorum"</p>
+                    </li>
+                    
+                    <li><p><i>Günde en fazla kaç saat çalışabilirsiniz? (İşleri bir türlü yetiştiremiyor mu? Gizli sorusu)</i></p>
+                        <p>Az çalışmak kadar çok çalışmak da problem yaratabilir! İşleri vaktinde yetiştiremiyor izlenimi doğabilir. "İşimi bitirinceye kadar"</p>
+                    </li>
+                    
+                    <li><p><i>Eve iş götürür müsünüz? (Zor soru. Cevap uzadıkça zor durumda kalmak mümkün)</i></p>
+                        <p>"Gerektiğinde tabii ki. Bazı işlerin zamanında bitirilmesi gerektiğinin bilincindeyim".</p>
+                    </li>
+                    
+                    <li><p><i>İnsanlar en çok hangi yönünüzü eleştirir? (Acaba çok hassas mı? Gizli sorusu)</i></p>
+                        <p>"Sürekli eleştirilen bir yönüm yoktur. Üstelik eleştirileri dinlemeyi ve hatalarımı düzeltmeye çalışmayı severim".</p>
+                    </li>
+                    
+                    <li><p><i>Bu pozisyondaki maaş beklentiniz? (Kritik soru: Kendinize biçtiğiniz değer ile eşanlamlı olabilir.)</i></p>
+                        <p>Maaşı tartışmadan önce sorumluluklarımın ne olacağını daha detaylı tartışmak istiyorum.
+                        <br>Mümkün olduğunca maaşla ilgili konuşmamak gerekir. Maaş teklif aldığınızda konuşulması gereken bir konu.
+                        <br>Önceden piyasa araştırması yapmak çok yararlı olacaktır. "Yaptığım araştırmalara göre ücretler XX-XXX arasında değişiyor." diyebilirsiniz. Bu şirket hakkında araştırma yaptığınızı gösterir.</p>
+                    </li>
+                    
+                    <li><p><i>İnsanlar en çok hangi yönünüzü eleştirir? (Acaba çok hassas mı? Gizli sorusu)</i></p>
+                        <p>Dürüst davranın. Fakat eski işiniz, patronunuz ya da iş arkadaşlarınızla ilgili kötü konuşmama konusunda özen gösterin.
+                        <br>Örneğin, "Yeni patronum kendi takımıyla çalışmak istedi."</p>
+                    </li>
+                </ul>
+                
+                
+                <br><br>
+                <h1><p class="lead">YAPIN!</p></h1>
+                <ul>
+                    <li>
+                        <p>Dürüst cevaplar verin.
+                        <br>Karşı sorular sorun.
+                        <br>Motivasyonunuzu belli edin.
+                        <br>Grup oyuncusu olduğunuzu vurgulayın.
+                        <br>Profesyonelliğinizi sarsmayın. (Aşırı şaka vb.)</p>
+                    </li>
+                </ul>    
+                
+                
+                <br><br>
+                <h1><p class="lead">YAPMAYIN!</p></h1>
+                <ul>
+                    <li>
+                        <p>Özel bilgiler vermek
+                        <br>Geçmiş problemlerden bahsetmek
+                        <br>Ücreti tartışmak. (İşe alındıktan sonra tartışılan bir konudur.)
+                        <br>Mülakatçının sözünü kesmek
+                        <br>Sorulara evet, hayır gibi çok kısa cevaplar vermek
+                        <br>Aile sorunlarını açmak</p>
+                    </li>
+                </ul>    
+        </div>
+</div>     
+  
+ <%-# FAST LINK MODAL -%>
+            <div class="panel panel-info" id="fixed">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-list-alt"></span> Hızlı Linkler
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                                <a href="#0" class="text-info">
+                                                    Örnek CV Resimleri
+                                                </a>
+                                            </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                                <a href="#1" class="text-info">
+                                                    Özgeçmiş (CV) Yazımı
+                                                </a>
+                                            </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="#2" class="text-info">
+                                       Etkili CV Yazımı İçin Püf Noktalar
+                                    </a>
+                                </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="#3" class="text-info">
+                                       CV Türleri
+                                    </a>
+                                </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="#4" class="text-info">
+                                       Ön Yazı Nasıl Hazırlanır?
+                                    </a>
+                                </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="#5" class="text-info">
+                                       Mülakatta Ne Yapmalı?
+                                    </a>
+                                </h4>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <a href="#6" class="text-info">
+                                       Bazı Mülakat Soruları ve Yanıtları
+                                    </a>
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            

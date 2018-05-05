@@ -1,0 +1,17 @@
+<%= form_for([@user, @user.derneks.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Dernek & Meslek Odası Adı</h5>
+        <%= f.text_field :dernekisim, placeholder: 'Dernek & Meslek Odası Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Başlangıç Yılı</h5>
+        <%= f.text_field :dernekbasyil, placeholder: 'Başlangıç Yılı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Bitiş Yılı</h5>
+        <%= f.text_field :dernekbityil, placeholder: 'Bitiş Yılı', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

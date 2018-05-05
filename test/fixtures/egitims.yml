@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  egitimokul: MyString
+  egitimbolum: MyString
+  egitimseviye: MyString
+  egitimbasyil: MyString
+  egitimbitisyil: MyString
+  user: one
+
+two:
+  egitimokul: MyString
+  egitimbolum: MyString
+  egitimseviye: MyString
+  egitimbasyil: MyString
+  egitimbitisyil: MyString
+  user: two

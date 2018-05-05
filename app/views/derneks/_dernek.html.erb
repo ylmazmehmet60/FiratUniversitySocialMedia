@@ -1,0 +1,14 @@
+<% if dernek.user %>
+    <% if dernek.id != nil %>
+        <div id="dernek-<%= dernek.id %>">
+            <div class="alert alert-success" style="height:100px;">
+            <div class="pull-left">
+                    Dernek İsim: <%= dernek.dernekisim %><br>
+                    Yıl: <%= dernek.dernekbasyil %>-<%= dernek.dernekbityil %><br>
+                   
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [dernek.user,dernek], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

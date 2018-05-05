@@ -1,0 +1,43 @@
+<% if post.user %>
+  <div class="info">
+          <div class="pull-right">
+        <% if belongs_to_user?(post) %>
+          <%= link_to edit_post_path(post), class: 'btn btn-primary btn-sm' do %>
+            <% fa_icon 'pencil' %>
+          <% end %>
+          <%= link_to post_path(post), method: :delete, class:'btn btn-danger btn-sm', remote: remote do %>
+            <% fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      </div>
+      
+    <%= render 'shared/avatar', user: post.user %>
+    <h4 class="name"><%= link_to post.user.name, user_path(post.user) %></h4>
+    <span class="action"> bir <%= link_to 'Gönderi', post %> oluşturdu. </span><br> 
+   
+  </div> <hr>
+  <div class="content">
+    <span class="text"><%= post.content_html %></span>
+    <% if post.attachment.present? %>
+      <div class="attachment">
+        <%= image_tag post.attachment %>
+      </div>
+    <% end %>
+   
+    <%= render 'shared/created_at', activity: post %>
+    <div class="points">
+      </i><span class="like-count"><%= post.cached_votes_up %> Beğeni</span>
+      <span class="comments-count"><%= post.comments_count %> Yorum</span>
+
+    </div>
+  </div>
+  <%= render 'shared/actions', resource: post %>
+<% end %>
+
+
+
+
+
+
+
+

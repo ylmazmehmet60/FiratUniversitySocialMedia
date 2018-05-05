@@ -1,0 +1,125 @@
+<div class="icerik">
+    <div class="container">
+            <a href="javascript:window.print()" class="btn btn-default pull-right print-hide"><i class="fa fa-print"></i></a>
+            <div id="cvrow">
+            	<div class="col-md-3">
+                	<div class="cv-sol-top"><center><img src="http://www.akademi.az/wp-content/uploads/2018/04/F%C4%B1rat_%C3%9Cniversitesi_logo.png" width="130"></center></div>
+                	<div class="cv-sol-bottom" >
+                    <%= image_tag @user.avatar.url || 'avatar.jpg', style: 'width:100%;', alt: @user.name  %>
+                    </div>
+                	<div class="cv-sol-bottom-last"></div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                         <div class="col-md-8">
+                         </div>   
+                         <div class="col-md-4">
+                             <br>
+                            <br><h4> <i class="fa fa-map-marker"></i>  Konum : <%=@user.location%></h4>
+        				    <h4><i class="fa fa-phone"></i> Telefon:  <%=@user.phone_number%></h4>
+                         </div> 
+                    </div>
+                        <div class="adi">
+						        	<span class="unvan_adi"></span> <%=@user.name%> </div>
+                        <div class="sayfa">
+                        
+                        <% if @countegitim > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Eğitim</h3>
+                            <% @showegitim.each do |egitim| %>  
+                              <div class="kisisel">
+							 
+            					<h3><%= egitim.egitimbolum %></h3>
+            					<h4><%= egitim.egitimokul %> - <b><%= egitim.egitimseviye %></b></h4>
+            					<h4><%= egitim.egitimbasyil %> - <%= egitim.egitimbitisyil %></h4><hr id="hrcv">
+            			     </div>
+						          	<% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	<% if @countdeneyim > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Akademik & İş Deneyimi</h3>
+                            <% @showdeneyim.each do |deneyim| %>  
+                              <div class="kisisel">
+            					<h3><%= deneyim.deneyimunvan %></h3>
+            					<h4><%= deneyim.deneyimkurumisim %></h4>
+            					<h4><%= deneyim.deneyimbirimisim %> - <b><%= deneyim.deneyimbolumisim %></b></h4>
+            					<h4><%= deneyim.deneyimbasyil %> - <%= deneyim.deneyimbityil %></h4><hr id="hrcv">
+            			     </div>
+						          	<% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	
+                      <% if @countyetenek > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Yetenek & Uzmanlık Alanı</h3>
+                            <% @showyetenek.each do |yetenek| %>  
+                              <div class="kisisel">
+                              <h5><%= yetenek.yetenekisim %></h5>
+        			                <h4><%= yetenek.yetenekbdy %></h4><hr id="hrcv">
+            			     </div>
+						          	<% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	
+                      	<% if @countyabancidil > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Yabancı Diller</h3>
+                            <% @showyabancidil.each do |yabancidil| %>  
+                              <div class="kisisel">
+                              <h4><%= yabancidil.yabancidilisim %> <%= yabancidil.yabancidilyil %> -<%= yabancidil.yabancidilsinavisim %><span class="spanposition"><b><%= yabancidil.yabancidilpuan %></b></span></h4><hr id="hrcv">
+            			     </div>
+						          	<% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	<% if @countprojeler > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Projeler</h3>
+                            <% @showprojeler.each do |projeler| %>  
+                              <div class="kisisel">
+            					<h3><%= projeler.projelerkurum %><%= projeler.projelerisim %></h3>
+            					<h4>Görev: <%= projeler.projelergorev %></h4>
+            					<h4><%= projeler.projelerbas %> - <%= projeler.projelerbit %></h4><hr id="hrcv">
+            			     </div>
+							        <% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	<% if @countodul > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Ödüller & Burslar</h3>
+                            <% @showodul.each do |odul| %>  
+                              <div class="kisisel">
+                                <h4><b><%= odul.odulisim %></b></h4>
+        			            <h4><%= odul.odulveren %> - <%= odul.odulyil %></h4><hr id="hrcv">
+            			     </div>
+						          	<% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	
+                      	<% if @countdernek > 0 %>
+                        <div class="kategori">
+                          <h3 id="h3style">Üye Olunan Dernek &amp; Meslek Odaları</h3>
+                            <% @showdernek.each do |dernek| %>  
+                              <div class="kisisel">
+                               <h4><%= dernek.dernekisim %><span class="spanposition"><b><%= dernek.dernekbasyil %>-<%= dernek.dernekbityil %></b></span><hr id="hrcv">
+            			     </div>
+							          <% end %> 
+                        </div>                        
+                      	<% end %>
+                      	
+                      	
+                      <div class="create">* Bu içerik <%= Time.now.strftime("%d/%m/%Y") %> tarihinde F.Ü Yaz.Tek MBS tarafından üretilmiştir.</div>
+                </div>
+             </div>
+        </div>
+    </div> 
+ </div>
+ 
+ 
+ 

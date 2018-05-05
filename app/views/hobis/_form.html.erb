@@ -1,0 +1,9 @@
+<%= form_for([@user, @user.hobis.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Hobi Adı</h5>
+        <%= f.text_field :hobiisim, placeholder: 'Hobi Adı', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

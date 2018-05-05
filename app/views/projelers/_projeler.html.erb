@@ -1,0 +1,15 @@
+<% if projeler.user %>
+    <% if projeler.id != nil %>
+        <div id="projeler-<%= projeler.id %>">
+            <div class="alert alert-success" style="height:120px;">
+            <div class="pull-left">
+                    Proje İsmi: <%= projeler.projelerisim %><br>
+                    Proje Kurum: <%= projeler.projelerkurum %><br>
+                    Göreviniz: <%= projeler.projelergorev %><br>
+                    Yıl: <%= projeler.projelerbas %>-<%= projeler.projelerbit %><br>
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [projeler.user,projeler], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

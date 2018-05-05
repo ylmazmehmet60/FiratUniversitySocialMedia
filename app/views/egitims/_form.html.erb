@@ -1,0 +1,25 @@
+<%= form_for([@user, @user.egitims.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Okul / Üniversite Adı</h5>
+        <%= f.text_field :egitimokul, placeholder: 'Okul İsmi', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Okuduğu / Mezun olduğu bölüm</h5>
+        <%= f.text_field :egitimbolum, placeholder: 'Bölüm İsmi', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Eğitim Seviyesi</h5>
+        <%= f.select :egitimseviye, options_for_select([ "Lise", "Ön Lisans", "Lisans" , "Yükseklisans", "Doktora"], "Lisans"), {}, {:class => 'form-control'}%>
+    </div>
+	<div class="form-group">
+        <h5>Başlangıç Yılı</h5>
+        <%= f.text_field :egitimbasyil, placeholder: 'Bölüm İsmi', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Bitiş Yılı</h5>
+        <%= f.text_field :egitimbitisyil, placeholder: 'Bölüm İsmi', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

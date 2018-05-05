@@ -1,0 +1,24 @@
+<% if egitim.user %>
+    <% if egitim.id != nil %>
+        <div id="egitim-<%= egitim.id %>">
+            <div class="alert alert-success" style="height:100px;">
+            <div class="pull-left">
+                    <%= egitim.egitimokul %>-<%= egitim.egitimbolum %><br>
+                    <%= egitim.egitimseviye %><br>
+                    <%= egitim.egitimbasyil %>- <%= egitim.egitimbitisyil %><br>
+                   
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [egitim.user,egitim], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+
+
+
+
+
+       
+       
+  

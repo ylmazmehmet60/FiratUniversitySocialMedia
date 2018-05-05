@@ -1,0 +1,49 @@
+<div class="container">
+<div class="row" id="ustbosluk">
+  <div id="newsfeed" class="col-lg-6">
+    <h4><%= fa_icon "newspaper-o" %> HABERLER</h4>
+    <div id="activities">
+      <% if @activities.empty? %>
+        <div class="well">
+          <%= render('shared/no_resource', resources: 'Activities') %>
+        </div>
+      <% else %>
+        <%= render_activities(@activities, layout: '/shared/activity') %>
+      <% end %>
+    </div>
+    <%= render 'shared/paginate', resources: @activities %>
+  </div>
+  <div id="intro" class="col-lg-6">
+    <h1>Fırat Üniversitesi Teknoloji Yazılım Mühendisliği Mezun Öğrenci Bilgi Portalı </h1>
+    <p></p>
+    <hr>
+  
+  <div class="row">  
+    <div class="col-lg-6">
+       <div id="user-info" class="well">
+         <div class="text-center">
+            <h5>  En Yeni Üyelerimiz </h5>
+            <% @yeniuyeler.each do |i| %>
+              <%= render 'shared/avatar', user: i %>
+              <h5> <%= i.name %> </h5>
+        <% end %>
+         </div>
+       </div> 
+    </div>
+    
+      <div class="col-lg-6">
+       <div id="user-info" class="well">
+         <div class="text-center">
+            <h5>  En Aktif Üyelerimiz </h5>
+            <% @enaktifuyeler.each do |i| %>
+              <%= render 'shared/avatar', user: i %>
+              <h5> <%= i.name %> </h5>
+        <% end %>
+         </div>
+       </div> 
+    </div>
+  </div>
+  
+  </div>
+</div>
+</div>

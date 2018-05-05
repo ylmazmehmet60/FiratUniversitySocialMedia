@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dernekisim: MyString
+  dernekbasyil: MyString
+  dernekbityil: MyString
+  user: one
+
+two:
+  dernekisim: MyString
+  dernekbasyil: MyString
+  dernekbityil: MyString
+  user: two

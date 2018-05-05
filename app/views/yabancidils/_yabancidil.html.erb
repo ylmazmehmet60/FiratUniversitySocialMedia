@@ -1,0 +1,14 @@
+<% if yabancidil.user %>
+    <% if yabancidil.id != nil %>
+        <div id="yabancidil-<%= yabancidil.id %>">
+            <div class="alert alert-success" style="height:100px;">
+            <div class="pull-left">
+                    <%= yabancidil.yabancidilisim %>-<%= yabancidil.yabancidilsinavisim %><br>
+                    Yıl: <%= yabancidil.yabancidilyil %><br>
+                    Puan: <%= yabancidil.yabancidilpuan %><br>
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [yabancidil.user,yabancidil], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

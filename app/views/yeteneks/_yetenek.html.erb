@@ -1,0 +1,13 @@
+<% if yetenek.user %>
+    <% if yetenek.id != nil %>
+        <div id="yetenek-<%= yetenek.id %>">
+            <div class="alert alert-success" style="height:100px;">
+            <div class="pull-left">
+                    Adı: <%= yetenek.yetenekisim %><br>
+                    Açıklama: <%= yetenek.yetenekbdy %><br>
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [yetenek.user,yetenek], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

@@ -1,0 +1,33 @@
+
+
+
+<%= render 'shared/wrapper' %>
+<br>
+<div class="container">
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>
+  <div class="col-lg-9">
+    <% if @post.user %>
+      <div id="post-<%= @post.id %>" class="post">
+        <div class="row">
+          <div class="col-lg-12  well">
+            <%= render @post, remote: false %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 well">
+            <h4>Yorumlar</h4>
+            <hr>
+            <%= render 'comments/form', commentable: @post %>
+            <br>
+            <div class="comments">
+              <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+</div></div>

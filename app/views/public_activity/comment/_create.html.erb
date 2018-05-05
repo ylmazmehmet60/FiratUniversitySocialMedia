@@ -1,0 +1,21 @@
+<% if activity_resources_exist?(activity) %>
+  <div id="activity-<%= activity.id %>">
+    <div class="activity-comment">
+      <div class="info">
+        <div id="movements">
+          <h5>
+            <div class="row">
+              <div class="col-md-3">          
+                <%= render 'shared/avatar', user: activity.owner %>
+              </div>
+              <div class="col-md-9">
+                <%= link_to activity.owner.name, user_path(activity.owner) %>'ın
+                <%= link_to 'gönderisine', activity.trackable.commentable %> yorum yaptı.</span>
+              </div>
+            </div>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

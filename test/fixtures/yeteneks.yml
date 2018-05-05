@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yetenekisim: MyString
+  yetenekbdy: MyString
+  user: one
+
+two:
+  yetenekisim: MyString
+  yetenekbdy: MyString
+  user: two

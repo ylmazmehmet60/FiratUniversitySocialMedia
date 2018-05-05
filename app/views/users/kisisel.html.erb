@@ -1,0 +1,286 @@
+<div class="container">
+    <div class="row" id="ustbosluk">
+      <div class="col-lg-4">
+        <%= render 'userbox' %>
+      </div>
+      <div class="col-lg-8">
+        <div class="middlearea">
+      	<h1>Kişisel</h1>
+      		<div class="category">
+      		  <i class="fa fa-graduation-cap fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">Eğitim Durumu</h3>
+      			<% if @countegitim > 0 %>
+        			<div class="catcontent1">
+        			   <% @showegitim.each do |egitim| %>
+        				    <div class="catcontent1line">
+            					<h4><%= egitim.egitimbasyil %> - <%= egitim.egitimbitisyil %></h4>
+            					<h3><%= egitim.egitimbolum %></h3>
+            					<h4><%= egitim.egitimokul %> - <b><%= egitim.egitimseviye %></b>
+            					</h4>
+        					</div>
+        					<% end %>
+        					
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , egitimekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+        				
+        				<hr class="hrline" />
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , egitimekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br>
+              </div>
+      			<% end %>
+      			
+      			<br id="BR_18" />
+      		</div>
+      		<!-- Diller -->
+      		
+      		<div class="category">
+      	    <i class="fa fa-language fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      					Yabancı Diller
+      			</h3>
+              <% if @countyabancidil > 0 %>
+        			<div class="catcontent2">
+        			   <ul class="catcontent2ulbox">
+        			   <% @showyabancidil.each do |yabancidil| %>
+        				      <li class="catcontent2libox">
+        				        <%= yabancidil.yabancidilisim %> <%= yabancidil.yabancidilyil %> -<%= yabancidil.yabancidilsinavisim %><span class="spanposition"><%= yabancidil.yabancidilpuan %></span>
+        				      </li>  
+        					<% end %>
+        					</ul>
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , yabancidilekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+	              	<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , yabancidilekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br><br>
+             </div>
+      			<% end %>
+      		</div>
+      		
+      		
+      		<!-- Akademik Deneyim -->
+          <div class="category">
+            <i class="fa fa-briefcase fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      				Akademik & İş Deneyimi
+      			</h3>
+              <% if @countdeneyim > 0 %>
+        			<div class="catcontent1">
+        			   <% @showdeneyim.each do |deneyim| %>
+        				    <div class="catcontent1line">
+            					<h4><%= deneyim.deneyimbasyil %> - <%= deneyim.deneyimbityil %></h4>
+            					<h3><%= deneyim.deneyimunvan %></h3>
+            					<h4><%= deneyim.deneyimkurumisim %></h4>
+            					<h4><%= deneyim.deneyimbirimisim %> - <b><%= deneyim.deneyimbolumisim %></b>
+            					</h4>
+        					</div>
+        					<% end %>
+        					
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , deneyimekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+        				
+        				<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , deneyimekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br>
+              </div>
+      			<% end %><br>
+      			</div>
+      			
+      		<!--  Yetenek & Uzmanlık Alanı -->
+      		<div class="category">
+      			<i class="fa fa-desktop fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      				Yetenek & Uzmanlık Alanı
+      			</h3>
+      			<% if @countyetenek > 0 %>
+        			<div class="catcontent2">
+        			<br> 
+        			<% @showyetenek.each do |yetenek| %>
+        			   <h5><%= yetenek.yetenekisim %></h5>
+        			   <h4><%= yetenek.yetenekbdy %></h4>
+        			<hr>
+        			<% end %>
+        			<br>  
+              <% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , yetenekekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+        			  	<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , yetenekekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br><br>
+             </div>
+      			<% end %>
+      		</div>	
+      			
+      		<!--  Ödül/Burs -->
+      		<div class="category">
+      			<i class="fa fa-trophy fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      				Ödüller & Burslar
+      			</h3>
+      			<% if @countodul > 0 %>
+        			<div class="catcontent2">
+        			<br> 
+        			<% @showodul.each do |odul| %>
+        			   <h5><%= odul.odulisim %></h5>
+        			   <h4><%= odul.odulveren %> - <%= odul.odulyil %></h4>
+        			<hr>
+        			<% end %>
+        			<br>  
+              <% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , odulekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+        			  	<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , odulekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br><br>
+             </div>
+      			<% end %>
+      		</div>
+
+          
+      		<!-- Dernekler -->
+      		<div class="category">
+      			<i class="fa fa-users fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      				Üye Olunan Dernek &amp; Meslek Odaları
+      			</h3>
+      			 <% if @countdernek > 0 %>
+        			<div class="catcontent2">
+        			   <ul class="catcontent2ulbox">
+        			   <% @showdernek.each do |dernek| %>
+        				      <li class="catcontent2libox">
+        				        <%= dernek.dernekisim %><span class="spanposition"><%= dernek.dernekbasyil %>-<%= dernek.dernekbityil %></span>
+        				      </li>  
+        					<% end %>
+        					</ul>
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , dernekekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+	              	<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , dernekekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br><br>
+             </div>
+      			<% end %>
+      		</div>
+      		
+      		
+      	<!-- Hobiler -->
+      		
+      		<div class="category">
+      	    <i class="fa fa-futbol-o fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      					Hobiler & İlgi Alanları
+      			</h3>
+              <% if @counthobi > 0 %>
+        			<div class="catcontent2">
+        			   <ul class="catcontent2ulbox">
+        			   <% @showhobi.each do |hobi| %>
+        				      <li class="catcontent2libox">
+        				        <%= hobi.hobiisim %></span>
+        				      </li>  
+        					<% end %>
+        					</ul>
+        					<% if current_user.id==@user.id %>
+          				<div class="pull-right">
+          				  <%= link_to 'Düzenle' , hobiekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+          				</div>
+          				<br id="BR_18" />
+        			  	<% end %>
+	              	<br>
+        			</div>
+      			<% else %>
+      			<div class="catcontent2">
+                  <% if current_user.id==@user.id %>
+            				<div class="pull-right">
+            				  <%= link_to 'Düzenle' , hobiekle_user_path(@user), class: 'btn btn-default btn-xs' %>
+            				</div>
+        			  	<% end %>
+        			  	<br><br>
+             </div>
+      			<% end %>
+      		</div>
+
+      		<!-- Ziyaret Özeti -->
+      
+      		<div class="category">
+      		  <i class="fa fa-bar-chart-o fa-2x" id="icon-position" aria-hidden="true"></i>
+      			<h3 class="cattitle">
+      				Ziyaret Özetleri
+      			</h3>
+      			<div class="catcontent2">
+      			  <br><h5>Takip Ettiği</h5>
+      				<h4>3 Kişi</h4>
+      				<br><h5>Takiçi</h5>
+      				<h4>5 Kişi</h4><br>
+      			</div>
+      		</div>
+      </div>
+  
+  
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  

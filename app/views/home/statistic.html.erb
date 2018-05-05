@@ -1,0 +1,68 @@
+<%= render 'shared/wrapper' %>
+<br>
+<%= javascript_include_tag "//www.google.com/jsapi" %>
+<%= javascript_include_tag "application", "chartkick" %>
+ <div class="container breadcrumb-sektion ">
+  <ol class="breadcrumb">
+    <li><a href="/">Anasayfa</a></li>
+    <li class="active">İstatikler</li>        
+  </ol>
+</div>
+<%= yield :charts_js %>
+
+<div class="container white">
+    <div id="user-info" class="well">
+      <center><p class="lead">Bölümümüze dair birkaç istatistik</p></center><hr>
+      <h1>Aktif Öğrenciler</h1> <button type="button" class="btn btn-success btn-circle btn-lg">297 Öğrenci</button>
+      <%= pie_chart [["1. Sınıf", 104], ["2. Sınıf", 90], ["3. Sınıf", 110], ["4. Sınıf", 80]] %>
+    
+	     <br><br><br>
+      <h1>Yüksel Lisans ve Doktora Yapan Öğrenciler</h1><button type="button" class="btn btn-info btn-circle btn-lg">79 Öğrenci</button><br>
+      <div class="container-fluid">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6">
+         <div id="column-prefix" style="width: 500px;height: 200px;"></div>
+         <script>
+           new Chartkick.ColumnChart("column-prefix", [["Yüksel Lisans",32],["Doktora",46]], {prefix: "$"});
+         </script>
+       </div>
+      </div>
+
+      <br><br><br>
+      <h1>Yurt Dışında Okuyan Öğrenciler</h1><button type="button" class="btn btn-warning btn-circle btn-lg">49 Öğrenci</button><br>
+      <div id="geo" style="height: 300px;"></div>
+      <script>
+        new Chartkick.GeoChart("geo", [["United States",44],["Poland",2],["Italy",3]]);
+      </script>
+
+      <br><br>
+      <h1>Yıllara Göre Mezun Olmuş Öğrenciler</h1><button type="button" class="btn btn-danger btn-circle btn-lg">118 Öğrenci</button><br>
+      <div class="container-fluid">
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-6">
+         <div id="numeric-axis-bar" style="width: 500px;height: 200px;"></div>
+         <script>
+           new Chartkick.BarChart("numeric-axis-bar", [{"name":"Yıllara Göre Mezun","data":{"2016":85,"2017":95}}], {xtype: "number"});
+         </script>
+         </div>
+      </div>
+    
+      <br><br><br>
+      <h1>Akademik Personel Sayımız</h1><button type="button" class="btn btn-default btn-circle btn-lg">20 Akademisyen</button><br>
+      <div id="donut" style="height: 300px;"></div>
+      <script>
+         new Chartkick.PieChart("donut", [["Prof. Dr.",3],["Doç. Dr.",3],["Dr. Öğr. Üyesi ",2],["Öğr. Gör. ",1],["Öğr. Gör. ",1],["Arş.Gör. ",11]], {donut: true});
+      </script><hr>        
+          
+      <br><br><br><br><br><br>    
+      <center><p class="lead">Sitemize dair birkaç istatistik</p></center>
+       <h1>Üyelerimiz</h1><br>
+       <%= line_chart User.group('date(created_at)').count %>    
+       <br><br>    
+       <h1>Üye Aktiviteleri</h1>
+       <%= pie_chart [["Gönderi Sayısı", Post.all.count], ["Yorum Sayısı", Comment.all.count], ["Beğeni Sayısı", (PublicActivity::Activity.where(key:'post.like').all.count.to_i)/2]], {"colors": ["#FFD700", "#1E90FF", "#8A2BE2"]} %>
+    
+
+</div>    

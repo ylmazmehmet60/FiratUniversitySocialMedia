@@ -1,0 +1,371 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.well {
+  background-color: white;
+}
+
+.main-section{
+	border:1px solid #428BCA;
+	background-color: #fff;
+}
+.profile-header{
+	background-color: #17a2b8;
+	height:150px;
+    position: relative;
+    text-align: center;
+    border-bottom: 2px solid #428BCA;
+    background-color: #dbdbdb;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTkyLjAwMDAwMDAwMDAwMDAzJyBoZWlnaHQ9JzEwMicgdmlld0JveD0nMCAwIDM4LjQwMDAwMDAwMDAwMDAwNiAyMC40Jz4KCTxkZWZzPgoJCTxwYXRoIGlkPSdzJyBmaWxsPScjZmZmZmZmJyBkPSdNMCwwbDMgMS41bC0zLDEuNXonLz4KCTwvZGVmcz4KCTxnIGlkPSdiJz4KCTx1c2UgeD0nLTMnIHk9Jy0xLjUnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMCcgeT0nMC4yJyBmaWxsLW9wYWNpdHk9JzAuNDQ5OTk5OTk5OTk5OTk5OTYnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMycgeT0nMS45JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuNDQ5OTk5OTk5OTk5OTk5OTYnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScwJyB5PSczLjYnIGZpbGwtb3BhY2l0eT0nMC40NDk5OTk5OTk5OTk5OTk5NicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0zJyB5PSc1LjMnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC42JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMCcgeT0nNycgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMycgeT0nOC43JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMycgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzMuMicgeT0nLTEuNScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTYuMicgeT0nMC4yJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzMuMicgeT0nMS45JyBmaWxsLW9wYWNpdHk9JzAuNDQ5OTk5OTk5OTk5OTk5OTYnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctNi4yJyB5PSczLjYnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMy4yJyB5PSc1LjMnIGZpbGwtb3BhY2l0eT0nMC4xNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy02LjInIHk9JzcnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMy4yJyB5PSc4LjcnIGZpbGwtb3BhY2l0eT0nMC40NDk5OTk5OTk5OTk5OTk5NicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy05LjQwMDAwMDAwMDAwMDAwMicgeT0nLTEuNScgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc2LjQnIHk9JzAuMicgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctOS40MDAwMDAwMDAwMDAwMDInIHk9JzEuOScgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNi40JyB5PSczLjYnIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTkuNDAwMDAwMDAwMDAwMDAyJyB5PSc1LjMnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4xNScgeGxpbms6aHJlZj0nI3MnIC8+CQoJPHVzZSB4PSc2LjQnIHk9JzcnIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTkuNDAwMDAwMDAwMDAwMDAyJyB5PSc4LjcnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nOS42MDAwMDAwMDAwMDAwMDEnIHk9Jy0xLjUnIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTEyLjYwMDAwMDAwMDAwMDAwMScgeT0nMC4yJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMycgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzkuNjAwMDAwMDAwMDAwMDAxJyB5PScxLjknIGZpbGwtb3BhY2l0eT0nMC4xNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0xMi42MDAwMDAwMDAwMDAwMDEnIHk9JzMuNicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nOS42MDAwMDAwMDAwMDAwMDEnIHk9JzUuMycgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTEyLjYwMDAwMDAwMDAwMDAwMScgeT0nNycgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjE1JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nOS42MDAwMDAwMDAwMDAwMDEnIHk9JzguNycgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMTUuOCcgeT0nLTEuNScgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4JCgk8dXNlIHg9JzEyLjgnIHk9JzAuMicgZmlsbC1vcGFjaXR5PScwLjYnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMTUuOCcgeT0nMS45JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMTUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxMi44JyB5PSczLjYnIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTE1LjgnIHk9JzUuMycgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMTIuOCcgeT0nNycgZmlsbC1vcGFjaXR5PScwLjE1JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTE1LjgnIHk9JzguNycgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMTYnIHk9Jy0xLjUnIGZpbGwtb3BhY2l0eT0nMC4zJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTE5LjAwMDAwMDAwMDAwMDAwNCcgeT0nMC4yJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMycgeGxpbms6aHJlZj0nI3MnIC8+CQoJPHVzZSB4PScxNicgeT0nMS45JyBmaWxsLW9wYWNpdHk9JzAuNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0xOS4wMDAwMDAwMDAwMDAwMDQnIHk9JzMuNicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgkKCTx1c2UgeD0nMTYnIHk9JzUuMycgZmlsbC1vcGFjaXR5PScwLjQ0OTk5OTk5OTk5OTk5OTk2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTE5LjAwMDAwMDAwMDAwMDAwNCcgeT0nNycgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjMnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxNicgeT0nOC43JyBmaWxsLW9wYWNpdHk9JzAuMycgeGxpbms6aHJlZj0nI3MnIC8+Cgk8L2c+Cgk8dXNlIHg9Jy0xOS4wMDAwMDAwMDAwMDAwMDQnIHk9JzEwLjInIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIHhsaW5rOmhyZWY9JyNiJyAvPgoJPHVzZSB4PSctMzguMicgeT0nLTYuOCcgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIC0xIDAgMCknIHhsaW5rOmhyZWY9JyNiJyAvPgoJPHVzZSB4PScxOS4yMDAwMDAwMDAwMDAwMDMnIHk9Jy0xMy42JyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJyB4bGluazpocmVmPScjYicgLz4KCTx1c2UgeD0nMTkuMjAwMDAwMDAwMDAwMDAzJyB5PSctMjMuOCcgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLTEgMCAwKScgeGxpbms6aHJlZj0nI2InIC8+Cjwvc3ZnPgo=);
+    
+}
+
+.user-detail{
+	margin:50px 0px 30px 0px;
+}
+.user-detail img{
+	height:120px;
+	width:120px;
+}
+
+.imguserbox{
+	height:120px;
+	width:120px;
+	margin-top: 85px;
+}
+
+.user-detail h5{
+	margin:15px 0px 5px 0px;
+}
+.user-social-detail{
+	padding:10px 0px;
+	background-color: #17a2b8;
+}
+h4 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    margin-top: 10px;
+}
+h3 strong {
+    font-weight: 400;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+ .panel > .list-group
+{
+    margin-bottom: 0;
+}
+.panel > .list-group .list-group-item
+{
+    border-width: 1px 0;
+}
+.panel > .list-group .list-group-item:first-child
+{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.panel > .list-group .list-group-item:last-child
+{
+    border-bottom: 0;
+}
+.panel-heading + .list-group .list-group-item:first-child
+{
+    border-top-width: 0;
+}
+.panel-default .list-group-item.active
+{
+    color: #000;
+    background-color: #DDD;
+    border-color: #DDD;
+}
+.panel-primary .list-group-item.active
+{
+    color: #FFF;
+    background-color: #428BCA;
+    border-color: #428BCA;
+}
+.panel-success .list-group-item.active
+{
+    color: #3C763D;
+    background-color: #DFF0D8;
+    border-color: #D6E9C6;
+}
+.panel-info .list-group-item.active
+{
+    color: #31708F;
+    
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+}
+.panel-warning .list-group-item.active
+{
+    color: #8A6D3B;
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+}
+.panel-danger .list-group-item.active
+{
+    color: #A94442;
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+}
+.panel a.list-group-item.active:hover, a.list-group-item.active:focus
+{
+    color: #000;
+    background-color: #DDD;
+    border-color: #DDD;
+}
+
+#cerceve {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    border: 1px solid rgb(221, 221, 221);
+    margin: 0px 0px;
+    padding: 20px;
+    
+}
+
+#DIV_2 {
+    background: rgba(0, 0, 0, 0) url("cizgi.png") repeat scroll 0% 0%;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+#DIV_3 {
+    position: relative;
+    text-align: center;
+    background: rgb(219, 219, 219) url("cover.png") no-repeat scroll 50% 50%;
+    border-bottom: 5px solid #428BCA;
+}
+
+#kapakolcu {
+    height: 315px;
+}
+
+#SPAN_5 {
+    position: absolute;
+    top: 255px;
+    background:  #428BCA none repeat scroll 0% 0%;
+    border-radius: 50% 50% 50% 50%;
+    margin: 0px 0px -60px -60px;
+    padding: 3px;
+}
+
+
+#IMG_7 {
+    width: 114px;
+    border-radius: 50% 50% 50% 50%;
+
+}
+
+#DIV_8 {
+    text-align: center;
+    margin: 80px 0px 0px;
+}
+
+
+#DIV_12 {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    margin: 20px 0px 0px;
+    padding: 20px 10px;
+    border-top: 1px solid #dddddd
+
+
+}
+
+.middlearea {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 20px;
+}
+
+
+.category{
+    border: 1px solid rgb(234, 234, 234);
+    margin: 20px 0px 30px;
+}
+
+
+.cattitle {
+    background: rgba(0, 0, 0, 0) url("cizgi.png") repeat scroll 0% 0%;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-right: 0px none rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    border-left: 2px solid rgb(238, 238, 238);
+    font: normal normal 600 normal 15px / 20px "Open Sans", sans-serif;
+    margin: 20px 0px 10px -10px;
+    padding: 20px 35px;
+}
+
+.catcontent1 {
+    border-left: 1px solid rgb(234, 234, 234);
+    margin: 0px 35px;
+    padding: 10px 0px;
+}
+
+.catcontent1line {
+    position: relative;
+    margin: 20px 0px 0px;
+    padding: 0px 0px 10px 30px;
+}
+
+.catcontent1line:before {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 7px;
+    height: 7px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    box-sizing: content-box;
+    content: " ";
+    background-color:#f65757;
+}
+
+
+.hrline {
+    border-top: 1px dashed rgb(221, 221, 221);
+    margin: 20px 0px 20px 30px;
+}
+.hrline2 {
+    border-top: 1px dashed rgb(221, 221, 221);
+    margin: 20px 0px 20px 0px;
+}
+
+.catcontent2 {
+    margin: 0px 35px;
+    padding: 0px 0px 10px;
+}
+
+.catcontent2ulbox {
+    margin: 0px 0px 20px;
+    padding: 20px 0px 0px;
+}
+
+.catcontent2libox {
+    display: block;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px 15px;
+}
+
+#icon-position {
+    float: right;
+    margin: 12px 30px 0 0;
+}
+
+.spanposition{
+    float: right;
+}
+
+
+
+.cv-sol-top {
+    width: 80%;
+    margin: 0 10%;
+    height: 140px;
+    background: #C00;
+    border-bottom: 5px solid #FF605C;
+}
+.cv-sol-top img {
+    margin-top: 20px;
+}
+.cv-sol-bottom {
+    width: 80%;
+    margin: 0 10%;
+    height: 1200px;
+    background: #C00;
+    margin-top: 120px;
+    padding-top: 5px;
+}
+.cv-sol-bottom img {
+    border-bottom: 5px solid #FF605C;
+}
+.cv-sol-bottom-last {
+    width: 80%;
+    margin: 0 10%;
+    height: 25px;
+    padding: 10px 0;
+    background: #b80606;
+}
+.adi {
+    font-family: 'Patua One', cursive;
+    font-size: 52px;
+    margin: 60px 0 25px -200px;
+}
+.unvan_adi {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 52px;
+    color: #666;
+    font-weight: 300;
+}
+.sayfa {
+    line-height: 22px;
+    padding-bottom: 20px;
+}
+#h3style {
+    padding: 10px;
+    background: url(cizgi.png) repeat;
+    border: 1px solid #eee;
+    font-size: 1.17em;
+
+}
+
+#hrcv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+.kisisel {
+    margin-left: 40px;
+}
+.create {
+    background: #eee;
+    margin-top: 50px;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    color: #999;
+}
+#cvrow {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0 20px 0 20px;
+    float: left;
+    margin: 20px 0;
+}

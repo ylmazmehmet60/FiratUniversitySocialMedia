@@ -1,0 +1,12 @@
+<% if hobi.user %>
+    <% if hobi.id != nil %>
+        <div id="hobi-<%= hobi.id %>">
+            <div class="alert alert-success" style="height:64px;">
+            <div class="pull-left">
+                <%= hobi.hobiisim %><br>
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [hobi.user,hobi], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

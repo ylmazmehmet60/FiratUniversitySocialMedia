@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deneyimkurumisim: MyString
+  deneyimbirimisim: MyString
+  deneyimbolumisim: MyString
+  deneyimunvan: MyString
+  deneyimbasyil: MyString
+  deneyimbityil: MyString
+  user: one
+
+two:
+  deneyimkurumisim: MyString
+  deneyimbirimisim: MyString
+  deneyimbolumisim: MyString
+  deneyimunvan: MyString
+  deneyimbasyil: MyString
+  deneyimbityil: MyString
+  user: two

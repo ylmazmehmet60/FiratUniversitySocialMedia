@@ -1,0 +1,31 @@
+<div id="user-info" class="well">
+		<div class="sidebar-nav">
+        		<ul class="nav nav-list"> 
+        		  <li class="active"><a href="/home/portal"><i class="icon-home"></i>Anasayfa </a></li>
+        		  <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i>Haber Kaynağı</a></li>
+        		  <li><a href="<%= user_path(current_user) %>"><i class="icon-user"></i>Profil</a></li>
+        		  <li><a href="<%= new_event_path %>"><i class="icon-calendar"></i>Etkinlik Takvimi</a></li>
+        		  <li><a href="<%= find_friends_path%>" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><i class="glyphicon glyphicon-search"></i>Arkadaşlarını Bul</a></li>
+        		  <li><a href="<%= friends_user_path(current_user) %>"><i class="glyphicon glyphicon-thumbs-up	"></i>Takip Ettiklerim</a></li>
+        		  <li><a href="<%= followers_user_path(current_user) %>"><i class="glyphicon glyphicon-hand-right"></i>Takipçiler</a></li>
+        		  <li><a href="<%= edit_user_path(current_user) %>"><i class="glyphicon glyphicon-edit"></i>Sayfanı Düzenle</a></li>
+        		  <li><a href="<%= edit_user_registration_path %>"><i class="glyphicon glyphicon-compressed"></i>Parolanı Değiştir</a></li>
+        		  <li><a href="<%= destroy_user_session_path %>" rel="nofollow" data-method="delete"><i class="glyphicon glyphicon-log-out"></i>Çıkış Yap</a></li>
+        		</ul>
+    </div> 
+</div>    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+    
+    

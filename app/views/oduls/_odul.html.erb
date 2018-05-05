@@ -1,0 +1,13 @@
+<% if odul.user %>
+    <% if odul.id != nil %>
+        <div id="odul-<%= odul.id %>">
+            <div class="alert alert-success" style="height:120px;">
+            <div class="pull-left">
+                    Ödül Adı: <%= odul.odulisim %><br> Ödül Veren Kurum:<%= odul.odulveren %><br>
+                    Yıl: <%= odul.odulyil %>
+            </div>
+            <div class="pull-right"><%= link_to 'sil ', [odul.user,odul], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

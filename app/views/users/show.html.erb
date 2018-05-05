@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row" id="ustbosluk">
+      <div class="col-lg-4">
+        <%= render 'userbox' %>
+      </div>
+      <div class="col-lg-8">
+        <div id="cerceve">
+        	<div id="DIV_2">
+        		<div id="DIV_3">
+        			 <% if @user.cover.url %>
+                <div id="kapakolcu" style="background-image: url(<%= @user.cover.url %>);"></div>
+              <% else %>
+                <div id="kapakolcu" style="background-image: url(/assets/cover.png);"></div>
+              <% end %>
+        		 <span id="SPAN_5"><%= image_tag @user.avatar.url || 'avatar.jpg', id: 'IMG_7' %></span>
+        		</div>
+        		<div id="DIV_8">
+        				<h3><strong><%= @user.name %></strong></h3>
+                <h4><%= @user.bolum %></h4>
+                <h4><%= @user.ogrencilikdurum %></h4>
+                <h4><%= @user.about %></h4>
+        		</div>
+        		<div id="DIV_12">
+        		      <%= link_to  createcv_user_path(@user) do %>
+                    <i class="btn btn-success" aria-hidden="true">CV Görüntüle</i> 
+                   <% end %>
+        			 <% if current_user.id==@user.id %>
+        			    <div class="pull-right">
+        			      <%= link_to  edit_user_path(@user), class: 'btn btn-primary'  do %>
+                    <i class="fa fa-cog" aria-hidden="true">Bilgileri Düzenle</i> 
+                   <% end %>
+                <% end %>
+        			 </div>
+        		</div>
+        	</div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <br>
+  
+  
+
+  

@@ -1,0 +1,25 @@
+<%= form_for([@user, @user.projelers.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Proje Adı</h5>
+        <%= f.text_field :projelerisim, placeholder: 'Proje Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Proje Linki(varsa)</h5>
+        <%= f.text_field :projelerkurum, placeholder: 'Proje Linki', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Proje Göreviniz</h5>
+        <%= f.text_field :projelergorev, placeholder: 'Proje Göreviniz', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Proje Başlangıç Tarihi</h5>
+        <%= f.text_field :projelerbas, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    	<div class="form-group">
+        <h5>Proje Bitiş Tarihi</h5>
+        <%= f.text_field :projelerbit, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

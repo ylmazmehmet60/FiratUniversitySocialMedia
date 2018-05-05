@@ -1,0 +1,13 @@
+<%= form_for([@user, @user.socs.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5 >Sosyal Medya Adı</h5>
+        <%= f.select :socname, options_for_select([ "Facebook", "Twitter", "LinkedIn" , "Google Plus", "Youtube" , "instagram"  ], "Facebook"), {}, {:class => 'form-control'}%>
+    </div>
+    <div class="form-group">
+        <h5 >Abonelik Adresiniz</h5>
+        <%= f.text_field :socbody, placeholder: 'Abonelik Adresi', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-success' %>
+    </div>
+<% end %>

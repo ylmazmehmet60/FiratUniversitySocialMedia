@@ -1,0 +1,17 @@
+<%= form_for([@user, @user.oduls.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Ödül/Burs Adı</h5>
+        <%= f.text_field :odulisim, placeholder: 'Ödül/Burs Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Ödül/Burs Veren Kurum</h5>
+        <%= f.text_field :odulveren, placeholder: 'Ödül/Burs Veren Kurum', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Ödül/Burs Yılı</h5>
+        <%= f.text_field :odulyil, placeholder: 'Yılı 4 basamak halinde rakam olarak giriniz.', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

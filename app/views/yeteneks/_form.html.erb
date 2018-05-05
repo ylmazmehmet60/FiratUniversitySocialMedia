@@ -1,0 +1,13 @@
+<%= form_for([@user, @user.yeteneks.build], :remote=>'true') do |f| %>	
+    <div class="form-group">
+        <h5>Yetenek & Uzmanlık Alanı Adı</h5>
+        <%= f.text_field :yetenekisim, placeholder: 'Yetenek & Uzmanlık Alanı Adı', class: 'form-control' %>
+    </div>
+	<div class="form-group">
+        <h5>Açıklaması</h5>
+        <%= f.text_area :yetenekbdy, placeholder: 'Açıklaması', class: 'form-control' %>
+    </div>
+    <div class="actions">
+        <%= submit_tag 'Ekle', class: 'btn btn-primary' %>
+    </div>
+<% end %>

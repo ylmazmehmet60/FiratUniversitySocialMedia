@@ -1,0 +1,10 @@
+<% if soc.user %>
+    <% if soc.id != nil %>
+        <div id="soc-<%= soc.id %>">
+            <div class="alert alert-success" style="height:70px;">
+            <div class="pull-left"><strong><a href="<%= soc.socbody %>"><%= soc.socname %></a></strong></a></div>
+            <div class="pull-right"><%= link_to 'sil ', [soc.user,soc], method: :delete, class: 'btn btn-danger btn-sm', remote: true  %></div>
+            </div>
+        </div>
+    <% end %>    
+<% end %>
