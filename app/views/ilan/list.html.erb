@@ -1,0 +1,26 @@
+<br><br><br><br><br><br>
+<section id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="panel panel-danger panel-s">
+                        <div class="panel-body text-center">
+                            <strong><h2>Yazılım Mühendisliği İş İlanları</h2></strong>
+                        </div>
+                        <ul class="list-group text-left">
+                            <% for i in(0..(@record_count-1)) %>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><%= @date[i] %></span>
+                                    <span class="pull-right leftpos"><%= @location[i] %></span>
+                                    <h4 class="title"><%= link_to @jobTitle[i], {:controller => "ilan", :action => "detay", :to => @link[i].join(",").remove("https://www.yenibiris.com") }, target: 'blank'%></h4>
+                                    <h5 class="title2"><%= @company_name[i] %></h5>
+                                </li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+

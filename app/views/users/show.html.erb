@@ -12,7 +12,8 @@
               <% else %>
                 <div id="kapakolcu" style="background-image: url(/assets/cover.png);"></div>
               <% end %>
-        		 <span id="SPAN_5"><%= image_tag @user.avatar.url || 'avatar.jpg', id: 'IMG_7' %></span>
+        
+        		 <span id="SPAN_5"><%= image_tag @user.avatar.url || 'avatar.jpg',  class: 'img-circle img-thumbnail imguserbox', style:'background-color: #428BCA;' %></span>
         		</div>
         		<div id="DIV_8">
         				<h3><strong><%= @user.name %></strong></h3>

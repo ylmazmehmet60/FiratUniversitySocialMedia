@@ -230,3 +230,146 @@ p.search-tag-line {
 {
     margin-right: 10px;
 }
+
+
+.colset{
+    padding: 15px 15px 15px 15px;
+    background-color: #f6fbfc;
+    border-radius:10px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+
+.bottomhr{
+    width: 80px;
+    height: 3px;
+    margin: 0 0 18px;
+    border: 0;
+    background-color: #e74c3c;
+}
+.list3{
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.list3 li{
+    padding-bottom: 10px;
+}
+
+.list3 .spantext{
+    color: #666;
+    font-size: 16px;
+}
+  
+.okstyle{
+    padding-right: 10px;
+    content: '\f00c';
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.okstyleyesil{
+    color: #5cb85c;
+}
+
+.okstylekirmizi{
+    color: #e74c3c;
+}
+
+.btnsize{
+    width: 100%;
+}
+.metrostyle {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.metrostyle:hover {
+    background-color: #5190d9;
+}
+
+.orgmetro {
+    background-color: #603cba;
+}
+
+.metrostyle2 {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.orgmetro2 {
+    background-color: #008000;
+}
+.metrostyle2:hover {
+    background-color: #66B266 ;
+}
+
+.metrostyle3 {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.orgmetro3 {
+    background-color: #ffa500 ;
+}
+.metrostyle3:hover {
+    background-color: #ffc966 ;
+}
+
+.metrostyle4 {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.orgmetro4 {
+    background-color: #800080 ;
+}
+.metrostyle4:hover {
+    background-color: #bf7fbf ;
+}
+
+.metrostyle5 {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.orgmetro5 {
+    background-color: #0000b2 ;
+}
+.metrostyle5:hover {
+    background-color: #4c4cff ;
+}
+
+.metrostyle6 {
+    height: 100px;
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+}
+
+.orgmetro6 {
+    background-color: #ff033d ;
+}
+.metrostyle6:hover {
+    background-color: #ff678a ;
+}

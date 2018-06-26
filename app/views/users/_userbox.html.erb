@@ -16,7 +16,7 @@
                         
                         <% if @socexist > 0 %>
         			       <% @socall.each do |socall| %>
-        			         <a href="<%= socall.socbody %>"><i class="fa fa-<%= socall.socname.downcase %> fa-2x social"></i></a>   
+        			         <a href="<%= socall.socbody %>" target="_blank"><i class="fa fa-<%= socall.socname.downcase %> fa-2x social"></i></a>   
                            <% end %>
                         <% end %>
 

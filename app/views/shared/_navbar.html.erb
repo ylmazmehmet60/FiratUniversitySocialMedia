@@ -13,30 +13,19 @@
     
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
+          <li><a href="<%= ilan_list_path %>">Kariyer</a></li>
         <% if user_signed_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <a class="top_profile_mrow" id="top_myprofile_link" href="<%= user_path(current_user) %>" onclick="return TopMenu.select(this, event);" style="">Sayfam</a>
-              <a class="top_profile_mrow" id="top_edit_link" href="home/portal">Portal</a>
-              <a class="top_profile_mrow" id="top_edit_link" href="<%= home_front_path %>">Haberler</a>
-    				  <a class="top_profile_mrow" id="top_edit_link" href="<%= edit_user_path(current_user) %>">Düzenle</a>
-    				  <a class="top_profile_mrow" id="top_edit_link" href="<%= edit_user_registration_path %>">Parolayı Değiştir</a>
-    				  
-    				  <div class="top_profile_sep" style=""></div>
-    				  <a class="top_profile_mrow" id="top_edit_link" href="<%= destroy_user_session_path %>" rel="nofollow" data-method="delete">Çıkış Yap</a>
-    			
-    				  
-            </ul>
-          </li>
+          <li><a href="<%= user_path(current_user) %>">Sayfam</a></li>
+          <li><a href="/home/portal">Portal</a></li>
+          <li><a href="<%= home_front_path %>">Haberler</a></li>
+    			<li><a href="<%= destroy_user_session_path %>" rel="nofollow" data-method="delete">Çıkış Yap</a></li>
         <% else %>
+          <li><a href="/">Anasayfa</a></li>
           <li><%= link_to 'Haberler', home_front_path %></li>
           <li><%= link_to 'Üye Ol', new_user_registration_path %></li>
           <li><%= link_to 'Oturum Aç', user_session_path %></li>
         <% end %>
       </ul>
-      
-      
       
     </div>
     

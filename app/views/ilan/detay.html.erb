@@ -1,0 +1,66 @@
+<br><br><br><br><br><br>
+ <div class="container breadcrumb-sektion ">
+  <ol class="breadcrumb">
+    <li><a href="<%= ilan_list_path %>">Kariyer</a></li>
+    <li class="active"><%= @header_title %></li></li> 
+  </ol>
+</div>
+<section id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="panel panel-danger panel-s">
+                        <ul class="list-group text-left">
+                                <li class="list-group-item">
+                                    <div class="col-md-2" style="padding-top: 23px;">
+                                   
+                                        <img src="<%= @header_img %>" class="media-object  img-thumbnail" alt="a" />
+                                    </div>    
+                                    <div class="col-md-10">
+                                        <h3 class="colorblue"><%= @header_title %></h3>
+                                        <h5><i class="glyphicon glyphicon-home mr5"></i><%= @company_title %></h5>
+                                        <h5><i class="glyphicon glyphicon-map-marker mr5"></i><%= @location_title %></h5>
+                                        <h5><i class="glyphicon glyphicon-time mr5"></i><%= @summary_info_detail[-3] %></h5>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <% if user_signed_in? %>   
+                                            <button type="button" class="btn btn-success pull-right" >Bu ilana başvur.</button>
+                                            <a href="/users/<%=current_user.slug %>/createcv" class="btn btn-primary pull-right" style="margin-right: 2px;">CV görüntüle</a>
+                                        <% end %>  
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                
+                                <li class="list-group-item" style="border-top: solid 1px #add8e6;">
+                                    <div class="col-md-12">
+                                        <br><h4 class="colorblue text-left">İş Tanımı & Aranan Nitelikler</h4><br>
+                                        <ul>
+                                            <% for i in(0..(@gn_count-1)) %>
+                                                 <li><%= @qualifications[i] %></li>
+                                            <% end %>
+                                        </ul>
+                                       
+                                    </div> 
+                                    <div class="row"></div>
+                                </li>
+                                
+                                 <li class="list-group-item" style="border-top: solid 1px #add8e6;">
+                                    <div class="col-md-12">
+                                        <br><h4 class="colorblue text-left">Özet Bilgiler</h4><br>
+                                        <% for i in(0..(@si_count-1)) %>
+                                            <div class="row">
+                                                <div class="col-md-2 text-right"><%= @summary_info[i] %>&ensp;&ensp;&ensp;&ensp;:</div>
+                                                <div class="col-md-10 text-left"><%= @summary_info_detail[i] %></div>
+                                            </div> 
+                                        <% end %>
+                                    </div> 
+                                    <div class="row"></div>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
