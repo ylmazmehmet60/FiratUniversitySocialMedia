@@ -54,7 +54,7 @@ gem 'active_model_serializers'
 gem 'chartkick', '~> 2.2.0'
 gem 'chart-js-rails'
 
-
+gem 'aws-sdk', '~> 2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
