@@ -40,12 +40,12 @@ h6 {
   color: white !important;
 
   &:hover {
-    color: $bg-color !important;
+    color: #bce8f1 !important;
   };
 }
 
 .avatar {
-  border: 1px solid $border-color;
+  border: 1px solid #3b4348;
   width: 50px;
   height: 50px;
 }
@@ -60,7 +60,7 @@ h6 {
 
 .activity {
   background: white;
-  border: 1px solid $border-color;
+  border: 1px solid #3b4348;
   border-radius: 3px;
   padding: 10px;
   margin: 10px;
@@ -68,18 +68,18 @@ h6 {
 
 .name {
   display: inline-block;
-  font-size: $default-font-size;
+  font-size: 1.65rem;
   margin-left: 10px;
 }
 
 .action {
-  font-size: $default-font-size;
+  font-size: 1.65rem;
   margin-left: 2px;
 }
 
 .created-at {
-  color: $light-text-color;
-  font-size: $small-font-size;
+  color: #808080;
+  font-size: 1.25rem;
   margin-top: 15px;
 }
 
@@ -89,7 +89,7 @@ h6 {
 }
 
 .btn-primary {
-  background-color: $navbar-color;
+  background-color: #333333;
 }
 
 .btn-sm {
@@ -118,7 +118,7 @@ textarea {
 
 [placeholder]:empty:before {
   content: attr(placeholder);
-  color: $light-text-color;
+  color: #808080;
 }
 
 [placeholder]:empty:focus:before {
@@ -138,15 +138,15 @@ textarea {
 }
 
 .liked {
-  color: $liked-color !important;
+  color: #2a6496 !important;
 }
 
 .points span {
   padding: 5px;
-  background-color: $bg-color;
-  color: $light-text-color;
+  background-color: #bce8f1;
+  color: #808080;
   display: inline-block;
-  font-size: $small-font-size;
+  font-size: 1.25rem;
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -158,12 +158,12 @@ textarea {
   .actions {
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid #3b4348;
 
     a,
     button {
       font-family: 'Montserrat', sans-serif;
-      background-color: $border-color;
+      background-color: #3b4348;
       color: #555;
 
       i {
@@ -176,7 +176,7 @@ textarea {
 #links,
 #user-info {
   h5 {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid #3b4348;
     padding: 15px 10px;
     margin: 0;
   }
@@ -198,7 +198,7 @@ textarea {
   }
 
   h5 {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid #3b4348;
     padding: 15px 10px;
     margin: 0;
   }
@@ -212,13 +212,13 @@ p {
 }
 
 .atwho-view .cur {
-  background: $navbar-color;
+  background: #333333;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-  background: darken($navbar-color, 10%);
+  background: darken(#333333, 10%);
 }
 
 .dropdown-menu > li > a {
