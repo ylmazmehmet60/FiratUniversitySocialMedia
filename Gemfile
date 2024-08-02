@@ -16,7 +16,7 @@ gem 'merit'
 gem 'jquery-atwho-rails'
 
 # Use twitter bootstrap sass
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
